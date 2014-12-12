@@ -2,13 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>Just Test</title>
 <script src="scripts/require.js"  data-main="scripts/config"></script>
+
+<script type="text/ejs" id="todoList">
+<% can.each(this, function(val, key) { %>
+    <li><%= val.attr('description') %></li>
+<% }); %>
+</script>
 
 </head>
 
 <body>
-    <div id="main"></div>
+    <div id="main">
+    </div>
+    <textarea id="content"></textarea>
+    <ul id="testlist">
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
 </body>
 <script>
 

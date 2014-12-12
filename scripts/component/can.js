@@ -7,6 +7,6 @@
  * Includes: CanJS default build
  * Download from: http://canjs.us/
  */
-define(["can/util/library", "can/control/route", "can/model", "can/view/mustache", "can/component"], function(can) {
-	return can;
+define(["can/util/library", "can/control/route", "can/model", "can/view/ejs", "can/util/fixture", "can/component"], function(can) {
+    return can;
 });
