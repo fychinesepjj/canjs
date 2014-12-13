@@ -1,9 +1,18 @@
-{
-      baseUrl: "scripts",
-　　　 paths: {
-　　　　　　"jquery": "component/jquery.min",
-　　　　　　"canjs": "component/can",
-　　　　},
-    name: "main",
-    out: "main-built.js"
-}
+({
+    appDir: './scripts',
+    dir: './dist',
+    baseUrl: ".",
+    mainConfigFile: './scripts/config.js',
+    optimizeCss: 'none',
+    removeCombined: true,
+    modules: [
+        {
+            name: 'config',
+            include: ['jquery', 'canjs']
+        },
+        {
+            name: 'test/say',
+            exclude: ['config']
+        }
+    ],
+})
